@@ -9,18 +9,18 @@ public class Main
         }
         public static void getScannerPersInf()
         {
-            Scanner PersInf = new Scanner(System.in);
+            Scanner persinf = new Scanner(System.in);
 
             System.out.print("Please, enter your name: ");
-            String name = PersInf.nextLine();
+            String name = persinf.nextLine();
             System.out.print("Please, enter your surname: ");
-            String surname = PersInf.nextLine();
+            String surname = persinf.nextLine();
             System.out.print("Please, enter your age: ");
-            int age = PersInf.nextInt();
+            int age = persinf.nextInt();
             System.out.print("Please, enter your height in centimeters: ");
-            int height = PersInf.nextInt();
+            int height = persinf.nextInt();
             System.out.print("Please, enter your weight in kilograms: ");
-            int weight = PersInf.nextInt();
+            double weight = persinf.nextDouble();
             System.out.println();
             System.out.println("Name: " + name);
             System.out.println("Surname: " + surname);
@@ -28,24 +28,25 @@ public class Main
             System.out.println("Height: " + height);
             System.out.println("Weight: " + weight);
             System.out.println();
-            PersInf.close();
+            persinf.close();
         };
         public static void getASCII()
         {
-            char Symbol1 = 'C';
-            char Symbol2 = 'a';
+            char symbol1 = 'C';
+            char symbol2 = 'a';
 
-            System.out.println("" + Symbol1 + " - " + (int) Symbol1);
-            System.out.println("" + Symbol2 + " - " + (int) Symbol2);
+            System.out.println("" + symbol1 + " - " + (int) symbol1);
+            System.out.println("" + symbol2 + " - " + (int) symbol2);
             System.out.println();
         };
         public static void getBMI()
         {
-            double Weight = 90;
-            double Height = 1.85;
-            double BMI = Weight / (Height * Height);
+            double Weight = 88.8;
+            int Height = 171;
+            double a = (double) Height / 100;
+            double BMI = Weight / (a * a);
             int num = (int) Math.round(BMI);
 
             System.out.println("BMI = " + num + " kg/m2");
-        };
+        }
 }
