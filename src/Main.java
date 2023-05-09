@@ -1,4 +1,5 @@
 // Homework_4
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         getSwitchCaseMonth();
@@ -7,8 +8,12 @@ public class Main {
         getOutTemp();
         getColorRainbow();
 
-        getForOddNumber();
+        //getForOddNumber();
+        //getForNumber();
+        //getSumPosNum();
+        getSequence();
     }
+
     // Управляющие конструкции
         /*
         1. Написать программу для вывода названия поры года по номеру месяца.
@@ -31,36 +36,34 @@ public class Main {
                     break;
                 default:
                     System.out.println("There is no month with this number");
-                }
+            }
         }
+
         /*
         2. Написать программу для вывода названия поры года по номеру месяца.
         При решении используйте оператор if-else-if.
-         */
+        */
         public static void getIfElseIfMonth() {
             int num = 10;
             if (num == 1 || num == 2 || num == 12) {
                 System.out.println("Time of the year: Winter");
-            }
-            else if (num == 3 || num == 4 || num == 5) {
+            } else if (num == 3 || num == 4 || num == 5) {
                 System.out.println("Time of the year: Spring");
-            }
-            else if (num == 6 || num == 7 || num == 8) {
+            } else if (num == 6 || num == 7 || num == 8) {
                 System.out.println("Time of the year: Summer");
-            }
-            else if (num == 9 || num == 10 || num == 11) {
+            } else if (num == 9 || num == 10 || num == 11) {
                 System.out.println("Time of the year: Autumn");
-            }
-            else {
+            } else {
                 System.out.println("There is no month with this number");
             }
         }
+
         /*
         3. Напишите программу, которая будет принимать на вход число и на
         выход будет выводить сообщение четное число или нет.
         Для определения четности числа используйте операцию получения
         остатка от деления - операция выглядит так: '% 2').
-         */
+        */
         public static void getEvenNumber() {
             int num = 5;
             if (num % 2 == 0) {
@@ -69,27 +72,27 @@ public class Main {
                 System.out.println("Нечетное число");
             }
         }
+
         /*
         4. Для введенного числа t (температура на улице) вывести
         Если t>–5, то вывести «Тепло».
         Если –5>= t > –20, то вывести «Нормально».
         Если –20>= t, то вывести «Холодно».
-         */
+        */
         public static void getOutTemp() {
             int t = -22;
             if (t > -5) {
                 System.out.println("Outdoor temperature: Warm");
-            }
-            else if (t <= -5 && t > -20) {
+            } else if (t <= -5 && t > -20) {
                 System.out.println("Outdoor temperature: Normally");
-            }
-            else {
+            } else {
                 System.out.println("Outdoor temperature: Cold");
             }
         }
+
         /*
         5. По введенному номеру определить цвет радуги (1 –красный, 4 – зеленый и т. д.).
-         */
+        */
         public static void getColorRainbow() {
             int num = 4;
             switch (num) {
@@ -118,17 +121,57 @@ public class Main {
                     System.out.println("This is unknown color");
             }
         }
+
     // Циклы
         /*
         1. При помощи цикла for вывести на экран нечетные числа от 1 до 99.
         При решении используйте операцию инкремента (++).
          */
         public static void getForOddNumber() {
-            for(int i = 1; i < 100; i++) {
+            for (int i = 1; i < 100; i++) {
                 if (i % 2 != 0) {
                     System.out.println(i);
                 }
             }
         }
 
+        /*
+        2. Необходимо вывести на экран числа от 5 до 1.
+        При решении используйте операцию декремента (--).
+         */
+        public static void getForNumber() {
+            for (int i = 5; i > 0; i--) {
+                System.out.println(i);
+            }
+        }
+
+        /*
+        3. Напишите программу, где пользователь вводит любое целое положительное число.
+        А программа суммирует все числа от 1 до введенного пользователем числа.
+        Для ввода числа воспользуйтесь классом Scanner.
+        */
+        public static void getSumPosNum() {
+            Scanner posnum = new Scanner(System.in);
+            System.out.print("Please, enter any positive number: ");
+            int num = posnum.nextInt();
+            posnum.close();
+                int sum = 0;
+                for (int i = 1; i <= num; i++) {
+                sum = sum + i;
+                }
+                    if (num > 0) {
+                System.out.println(sum);
+                    }
+                    else {
+                        System.out.println("The entered value is not a positive number, please try again");
+                    }
+        }
+        /*
+        4. Необходимо, чтоб программа выводила на экран вот такую последовательность:
+        7 14 21 28 35 42 49 56 63 70 77 84 91 98.
+        В решении используйте цикл while.
+         */
+        public static void getSequence() {
+
+        }
 }
