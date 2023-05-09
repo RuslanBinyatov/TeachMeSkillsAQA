@@ -6,6 +6,8 @@ public class Main {
         getEvenNumber();
         getOutTemp();
         getColorRainbow();
+
+        getForOddNumber();
     }
     // Управляющие конструкции
         /*
@@ -121,5 +123,12 @@ public class Main {
         1. При помощи цикла for вывести на экран нечетные числа от 1 до 99.
         При решении используйте операцию инкремента (++).
          */
+        public static void getForOddNumber() {
+            for(int i = 1; i < 100; i++) {
+                if (i % 2 != 0) {
+                    System.out.println(i);
+                }
+            }
+        }
 
 }
