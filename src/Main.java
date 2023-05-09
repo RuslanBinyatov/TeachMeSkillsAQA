@@ -8,10 +8,11 @@ public class Main {
         getOutTemp();
         getColorRainbow();
 
-        //getForOddNumber();
-        //getForNumber();
-        //getSumPosNum();
+        getForOddNumber();
+        getForNumber();
+        getSumPosNum();
         getSequence();
+        getTenFirstNum();
     }
 
     // Управляющие конструкции
@@ -130,9 +131,10 @@ public class Main {
         public static void getForOddNumber() {
             for (int i = 1; i < 100; i++) {
                 if (i % 2 != 0) {
-                    System.out.println(i);
+                    System.out.print(i+" ");
                 }
             }
+            System.out.println();
         }
 
         /*
@@ -141,8 +143,9 @@ public class Main {
          */
         public static void getForNumber() {
             for (int i = 5; i > 0; i--) {
-                System.out.println(i);
+                System.out.print(i+" ");
             }
+            System.out.println();
         }
 
         /*
@@ -159,19 +162,32 @@ public class Main {
                 for (int i = 1; i <= num; i++) {
                 sum = sum + i;
                 }
-                    if (num > 0) {
-                System.out.println(sum);
-                    }
-                    else {
-                        System.out.println("The entered value is not a positive number, please try again");
-                    }
+                if (num > 0) {
+                    System.out.println(sum);
+                }
+                else {
+                    System.out.println("The entered value is not a positive number, please try again");
+                }
         }
+
         /*
         4. Необходимо, чтоб программа выводила на экран вот такую последовательность:
         7 14 21 28 35 42 49 56 63 70 77 84 91 98.
         В решении используйте цикл while.
          */
         public static void getSequence() {
+            int i = 7;
+            while (i <= 98) {
+                System.out.print(i+" ");
+                i = i + 7;
+            }
+            System.out.println();
+        }
+
+        /*
+        5. Вывести 10 первых чисел последовательности 0,-5,-10,-15...
+         */
+        public static void getTenFirstNum() {
 
         }
 }
