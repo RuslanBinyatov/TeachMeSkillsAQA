@@ -188,6 +188,9 @@ public class Main {
         5. Вывести 10 первых чисел последовательности 0,-5,-10,-15...
          */
         public static void getTenFirstNum() {
+            try {
+
+            }
 
         }
 }
