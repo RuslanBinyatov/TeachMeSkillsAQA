@@ -10,9 +10,14 @@ public class Main {
 
         getForOddNumber();
         getForNumber();
-        getSumPosNum();
+        //getSumPosNum();
         getSequence();
         getTenFirstNum();
+        getSquareNum();
+
+        getElevenFirstFibonacci();
+        //getDeposit();
+        getMultiplicatTab();
     }
 
     // Управляющие конструкции
@@ -68,9 +73,9 @@ public class Main {
         public static void getEvenNumber() {
             int num = 5;
             if (num % 2 == 0) {
-                System.out.println("Четное число");
+                System.out.println("Even number");
             } else {
-                System.out.println("Нечетное число");
+                System.out.println("Odd number");
             }
         }
 
@@ -91,9 +96,7 @@ public class Main {
             }
         }
 
-        /*
-        5. По введенному номеру определить цвет радуги (1 –красный, 4 – зеленый и т. д.).
-        */
+        // 5. По введенному номеру определить цвет радуги (1 –красный, 4 – зеленый и т. д.).
         public static void getColorRainbow() {
             int num = 4;
             switch (num) {
@@ -184,13 +187,72 @@ public class Main {
             System.out.println();
         }
 
-        /*
-        5. Вывести 10 первых чисел последовательности 0,-5,-10,-15...
-         */
+        // 5. Вывести 10 первых чисел последовательности 0,-5,-10,-15...
         public static void getTenFirstNum() {
-            try {
-
+            int a = 0;
+            for (int i = 0; i < 10; i++) {
+                System.out.print(a+" ");
+                a = a - 5;
             }
+            System.out.println();
+        }
 
+        // 6. Составьте программу, выводящую на экран квадраты чисел от 10 до 20 включительно.
+        public static void getSquareNum() {
+            for (int i = 10; i <= 20; i++) {
+                System.out.print(i * i+" ");
+            }
+            System.out.println();
+        }
+
+    // Дополнительное задание
+        // 1. Выведите на экран первые 11 членов последовательности Фибоначчи.
+        public static void getElevenFirstFibonacci() {
+            int a = 1;
+            int b = 1;
+            int c;
+            System.out.print(a+" "+b+" ");
+            for (int i = 3; i <= 11; i++) {
+                c = a + b;
+                System.out.print(c+" ");
+                a=b;
+                b=c;
+            }
+            System.out.println();
+        }
+
+        /*
+        2. За каждый месяц банк начисляет к сумме вклада 7% от суммы.
+        Напишите программу, в которую пользователь вводит сумму вклада и количество месяцев.
+        А банк вычисляет конечную сумму вклада с учетом начисления процентов за каждый месяц.
+        Для вычисления суммы с учетом процентов используйте цикл for.
+        Пусть сумма вклада будет представлять тип float.
+         */
+        public static void getDeposit() {
+            Scanner deposit = new Scanner(System.in);
+            System.out.print("Please, enter deposit amount: ");
+            float sum = deposit.nextFloat();
+            System.out.print("Please, enter the term of the deposit in months: ");
+            int period = deposit.nextInt();
+            deposit.close();
+                for(int i = 1; i <= period; i++) {
+                    sum = (float) (sum + (sum * 0.07));
+                }
+                        if (period == 1) {
+                            System.out.print("After "+period+" month the amount of the deposit will be: "+sum);
+                        }
+                        else {
+                            System.out.print("After "+period+" months the amount of the deposit will be: "+sum);
+                        }
+            System.out.println();
+        }
+
+        // 3. Напишите программу, которая выводит на консоль таблицу умножения.
+        public static void getMultiplicatTab() {
+            for (int i = 1; i < 10; i++) {
+                for (int j = 1; j < 10; j++) {
+                    System.out.printf("%d\t", i * j);
+                }
+            }
         }
 }
