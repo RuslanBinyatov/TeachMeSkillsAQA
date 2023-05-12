@@ -10,13 +10,13 @@ public class Main {
 
         getForOddNumber();
         getForNumber();
-        //getSumPosNum();
+        getSumPosNum();
         getSequence();
         getTenFirstNum();
         getSquareNum();
 
         getElevenFirstFibonacci();
-        //getDeposit();
+        getDeposit();
         getMultiplicatTab();
     }
 
@@ -160,7 +160,6 @@ public class Main {
             Scanner posnum = new Scanner(System.in);
             System.out.print("Please, enter any positive number: ");
             int num = posnum.nextInt();
-            posnum.close();
                 int sum = 0;
                 for (int i = 1; i <= num; i++) {
                 sum = sum + i;
@@ -250,10 +249,86 @@ public class Main {
         // 3. Напишите программу, которая выводит на консоль таблицу умножения.
         public static void getMultiplicatTab() {
             for (int i = 1; i < 10; i++) {
-                System.out.print(i+" ");
-                for (int j = 1; j < 10; j++) {
-                    //System.out.printf("%d\t", i * j);
+                System.out.print(i + "  ");
+            }
+            System.out.println();
+            int a = 0;
+            int b;
+            for (int i = 1; i < 10; i++) {
+                b = a + 2;
+                a = b;
+                if (b < 8) {
+                    System.out.print(b + "  ");
                 }
+                else {
+                    System.out.print(b + " ");
+                }
+            }
+            System.out.println();
+            int c = 0;
+            int d;
+            for (int i = 1; i < 10; i++) {
+                d = c + 3;
+                c = d;
+                if (d < 9) {
+                    System.out.print(d + "  ");
+                }
+                else {
+                    System.out.print(d + " ");
+                }
+            }
+            System.out.println();
+            int e = 0;
+            int f;
+            for (int i = 1; i < 10; i++) {
+                f = e + 4;
+                e = f;
+                if (f < 8) {
+                    System.out.print(f + "  ");
+                }
+                else {
+                    System.out.print(f + " ");
+                }
+            }
+            System.out.println();
+            int g = 0;
+            int h;
+            for (int i = 1; i < 10; i++) {
+                h = g + 5;
+                g = h;
+                System.out.print(h + " ");
+            }
+            System.out.println();
+            int k = 0;
+            int l;
+            for (int i = 1; i < 10; i++) {
+                l = k + 6;
+                k = l;
+                System.out.print(l + " ");
+            }
+            System.out.println();
+            int m = 0;
+            int n;
+            for (int i = 1; i < 10; i++) {
+                n = m + 7;
+                m = n;
+                System.out.print(n + " ");
+            }
+            System.out.println();
+            int o = 0;
+            int p;
+            for (int i = 1; i < 10; i++) {
+                p = o + 8;
+                o = p;
+                System.out.print(p + " ");
+            }
+            System.out.println();
+            int q = 0;
+            int r;
+            for (int i = 1; i < 10; i++) {
+                r = q + 9;
+                q = r;
+                System.out.print(r + " ");
             }
         }
 }
