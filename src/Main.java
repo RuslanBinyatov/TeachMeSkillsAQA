@@ -1,5 +1,6 @@
 // Homework_5
 import java.util.Scanner;
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         getArrayEntryNum();
@@ -17,15 +18,18 @@ public class Main {
         System.out.print("Please, enter any integer: ");
         int num = integer.nextInt();
 
-        for (int index = 0; index < numbers.length; index++)
-            //System.out.print(numbers[index] + " ");
-            if (num == index) {
-            }
-            //System.out.print(numbers[index] + " ");
-            //System.out.println(num + " ");
-            else {
-                System.out.println("The entered value is not a positive number, please try again");
-            }
+        int key = Arrays.binarySearch(numbers, num);
+        System.out.print(numbers[key] + " ");
 
+        //for (int index = 0; index < numbers.length; index++) {
+        // System.out.print(numbers[index] + " ");
+        //if (num == index) {
+        //System.out.println(num + " ");
+        //}
+        //System.out.print(numbers[index] + " ");
+        // else {
+        // System.out.println("The entered value is not a positive number, please try again");
+        //}
+        //}
     }
 }
