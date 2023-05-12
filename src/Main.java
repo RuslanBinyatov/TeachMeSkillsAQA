@@ -18,7 +18,15 @@ public class Main {
         int num = integer.nextInt();
 
         for (int index = 0; index < numbers.length; index++) {
+            //System.out.print(numbers[index] + " ");
+            if (num == index) {
+            }
             System.out.print(numbers[index] + " ");
-        }
+                //System.out.println(num + " ");
+            }
+            else if {
+                System.out.println("The entered value is not a positive number, please try again");
+            }
+
     }
 }
