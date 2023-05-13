@@ -5,10 +5,12 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        //getArrayEntryNum();
-        //getArrayWithoutNum();
-        //getArrayMaxMinAvgVal();
-        gtr();
+//        getArrayEntryNum();
+//        getArrayWithoutNum();
+//        getArrayMaxMinAvgVal();
+//        gtr();
+//        getArrayArithmeticMean();
+        getArrayEvenNum();
     }
     // Одномерные массивы
         /*
@@ -17,7 +19,7 @@ public class Main {
         Пусть число для поиска задается с консоли (класс Scanner).
          */
     public static void getArrayEntryNum() {
-        int[] numbers = new int[]{1, 2, 3, 4, 5};
+        int[] numbers = new int[] {1, 2, 3, 4, 5};
 
         Scanner integer = new Scanner(System.in);
         System.out.print("Please, enter any integer: ");
@@ -52,34 +54,86 @@ public class Main {
         Пусть будет возможность создавать массив произвольного размера.
         Пусть размер массива вводится с консоли.
          */
-        public static void getArrayMaxMinAvgVal() {
-            int n = 100;
-            double[] array = new double[n];
-            for (int i = 0; i < array.length; i++) {
-                array[i] = Math.random();
-            }
+    public static void getArrayMaxMinAvgVal() {
+        Scanner integer = new Scanner(System.in);
+        System.out.print("Please, enter the length of the array: ");
+        int num = integer.nextInt();
 
-            double max = array[0]; // Массив не должен быть пустым
-            double min = array[0];
-            double avg = 0;
-            for (int i = 0; i < array.length; i++) {
-                if(max < array[i])
-                    max = array[i];
-                if(min > array[i])
-                    min = array[i];
-                avg += array[i]/array.length;
-            }
-            System.out.println("max = " + max);
-            System.out.println("min = " + min);
-            System.out.println("avg = " + avg);
+        int [] mas = new int[num];
+
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = (int) (Math.random() * 10);
         }
-        //jfdjfdgjfdgbjgfdb
-        public static void gtr() {
-            int[] values = {4, 3, 6, 8, 5};
-            int target = 6;
+        System.out.println(Arrays.toString(mas));
 
-            boolean found = Arrays.asList(values).contains(target);
+        int max = mas[0];
+        int min = mas[0];
+        double avg = 0;
 
-            System.out.println(found);        // true
+        for (int i = 0; i < mas.length; i++) {
+            if (max < mas[i])
+                max = mas[i];
+            if (min > mas[i])
+                min = mas[i];
+            avg += mas[i];
         }
+        avg/=num;
+        System.out.println("max = " + max);
+        System.out.println("min = " + min);
+        System.out.println("avg = " + avg);
+    }
+        /*
+        3. Создайте 2 массива из 5 чисел.
+        Выведите массивы на консоль в двух отдельных строках.
+        Посчитайте среднее арифметическое элементов каждого массива и сообщите,
+        для какого из массивов это значение оказалось больше (либо сообщите, что их средние арифметические равны).
+         */
+    public static void getArrayArithmeticMean() {
+        int [] mas1 = new int[] {3, 1, 3, 4, 0};
+        int [] mas2 = new int[] {4, 5, 0, 5, 4};
+
+        System.out.println(Arrays.toString(mas1));
+        System.out.println(Arrays.toString(mas2));
+
+        double average1 = 0;
+        double average2 = 0;
+
+        for (int i = 0; i < 5; i++) {
+            average1 += mas1[i];
+            average2 += mas2[i];
+        }
+        average1/=5;
+        average2/=5;
+
+        if (average1 > average2) {
+            System.out.println("Arithmetic average of the first array ("+average1+") " +
+                    "greater than the arithmetic average of the second array ("+average2+")");
+        }
+        else if (average1 < average2){
+            System.out.println("Arithmetic average of the first array ("+average1+") " +
+                    "less than the arithmetic average of the second array ("+average2+")");
+        }
+        else {
+            System.out.println("Arithmetic averages of arrays are equal ("+average1+")");
+        }
+    }
+    // Дополнительное задание
+        /*
+        4. Создайте массив из n случайных целых чисел и выведите его на экран.
+        Размер массива пусть задается с консоли и размер массива может быть больше 5 и меньше или равно 10.
+        Если n не удовлетворяет условию - выведите сообщение об этом.
+        Если пользователь ввёл не подходящее число, то программа должна просить пользователя повторить ввод.
+        Создайте второй массив только из чётных элементов первого массива, если они там есть, и вывести его на экран.
+        */
+    public static void getArrayEvenNum() {
+        Scanner integer = new Scanner(System.in);
+        System.out.print("Please, enter the length of the array: ");
+        int num = integer.nextInt();
+
+        int [] mas = new int[num];
+
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = (int) (Math.random() * 10);
+        }
+        System.out.println(Arrays.toString(mas));
 }
