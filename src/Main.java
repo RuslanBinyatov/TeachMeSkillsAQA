@@ -5,13 +5,15 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        getArrayEntryNum();
+        //getArrayEntryNum();
         //getArrayWithoutNum();
+        //getArrayMaxMinAvgVal();
+        gtr();
     }
     // Одномерные массивы
         /*
-        0. Создайте массив целых чисел. Напишете программу, которая выводит сообщение о том,
-        входит ли заданное число в массив или нет.
+        0. Создайте массив целых чисел.
+        Напишете программу, которая выводит сообщение о том, входит ли заданное число в массив или нет.
         Пусть число для поиска задается с консоли (класс Scanner).
          */
     public static void getArrayEntryNum() {
@@ -22,8 +24,7 @@ public class Main {
         int num = integer.nextInt();
 
         int key = Arrays.binarySearch(numbers, num);
-
-        if () {
+        if (numbers[key] == num) {
             System.out.print(numbers[key] + " ");
         } else {
             System.out.println("The entered value is not a positive number, please try again");
@@ -41,8 +42,44 @@ public class Main {
             System.out.print("Please, enter any integer: ");
             int num = integer.nextInt();
 
-            int key = Arrays.binarySearch(numbers, num);
+            int k = Arrays.binarySearch(notnum, num);
 
 
+        }
+        /*
+        2. Создайте и заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
+        Для генерации случайного числа используйте метод Math.random().
+        Пусть будет возможность создавать массив произвольного размера.
+        Пусть размер массива вводится с консоли.
+         */
+        public static void getArrayMaxMinAvgVal() {
+            int n = 100;
+            double[] array = new double[n];
+            for (int i = 0; i < array.length; i++) {
+                array[i] = Math.random();
+            }
+
+            double max = array[0]; // Массив не должен быть пустым
+            double min = array[0];
+            double avg = 0;
+            for (int i = 0; i < array.length; i++) {
+                if(max < array[i])
+                    max = array[i];
+                if(min > array[i])
+                    min = array[i];
+                avg += array[i]/array.length;
+            }
+            System.out.println("max = " + max);
+            System.out.println("min = " + min);
+            System.out.println("avg = " + avg);
+        }
+        //jfdjfdgjfdgbjgfdb
+        public static void gtr() {
+            int[] values = {4, 3, 6, 8, 5};
+            int target = 6;
+
+            boolean found = Arrays.asList(values).contains(target);
+
+            System.out.println(found);        // true
         }
 }
