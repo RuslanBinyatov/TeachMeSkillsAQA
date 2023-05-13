@@ -127,13 +127,19 @@ public class Main {
         */
     public static void getArrayEvenNum() {
         Scanner integer = new Scanner(System.in);
-        System.out.print("Please, enter the length of the array: ");
+        System.out.print("Please, enter an array length between 6 and 10 inclusive: ");
         int num = integer.nextInt();
 
-        int [] mas = new int[num];
+        int[] mas = new int[num];
 
         for (int i = 0; i < mas.length; i++) {
             mas[i] = (int) (Math.random() * 10);
         }
-        System.out.println(Arrays.toString(mas));
+        if (num > 5 && num <= 10) {
+            System.out.println(Arrays.toString(mas));
+        }
+        else {
+            System.out.println("The entered value does not satisfy the condition, please try again");
+        }
+    }
 }
