@@ -10,7 +10,7 @@ public class Main {
 //        getArrayMaxMinAvgVal();
 //        gtr();
 //        getArrayArithmeticMean();
-        getArrayEvenNum();
+//        getArrayEvenNum();
     }
     // Одномерные массивы
         /*
@@ -128,14 +128,33 @@ public class Main {
     public static void getArrayEvenNum() {
         Scanner integer = new Scanner(System.in);
         System.out.print("Please, enter an array length between 6 and 10 inclusive: ");
-        int num = integer.nextInt();
+//        int num = integer.nextInt();
 
+        int n = 0;
 
-        while (num >= 5) {
-            Scanner sc = new Scanner(System.in);
-            System.out.print("The entered value does not satisfy the condition, please try again: ");
-            int sc = integer.nextInt();
+        while (n < 3) {
+            if(integer.hasNextInt()){
+                n = integer.nextInt();
+                if(n < 3){
+                    System.out.print("Введенное число должно быть больше 3. Повторите ввод: ");
+                }
+            } else {
+                System.out.println("Вы ввели не число. Повторите ввод:");
+                integer.next();
+            }
         }
+
+
+//        if (num >= 5) {
+//            while (num >= 5) {
+//                System.out.print("The entered value does not satisfy the condition, please try again: ");
+//                integer.next();
+//                if (num < 5);
+//                break;
+//            }
+//        } else {
+//            System.out.print("Please");
+//        }
 
 
 
@@ -225,4 +244,12 @@ public class Main {
 
 
     }
+        /*
+        5. Создайте массив и заполните массив.
+        Выведите массив на экран в строку.
+        Замените каждый элемент с нечётным индексом на ноль.
+        Снова выведете массив на экран на отдельной строке.
+     */
+        public static void getArrayEntryNum() {
+            int[] numbers = new int[] {1, 2, 3, 4, 5};
 }
