@@ -135,15 +135,22 @@ public class Main {
         for (int i = 0; i < mas.length; i++) {
             mas[i] = (int) (Math.random() * 10);
         }
-        if (num > 5 && num <= 10) {
-            System.out.println(Arrays.toString(mas));
+        while (num <= 5 && num > 10) {
+            System.out.println("The entered value does not satisfy the condition, please try again: ");
+            integer.next();
+//            System.out.println(Arrays.toString(mas));
         }
+        System.out.println(Arrays.toString(mas));
         else if {
             System.out.println("The entered value does not satisfy the condition, please try again: ");
             integer.next();
             (num > 5 && num <= 10)
             System.out.println(Arrays.toString(mas));
         }
+
+//        while (i <= 98) {
+//            System.out.print(i+" ");
+//            i = i + 7;
 
 //        while (n <= 3) {
 //            if(sc.hasNextInt()){
