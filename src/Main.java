@@ -138,8 +138,11 @@ public class Main {
         if (num > 5 && num <= 10) {
             System.out.println(Arrays.toString(mas));
         }
-        else {
-            System.out.println("The entered value does not satisfy the condition, please try again");
+        else if {
+            System.out.println("The entered value does not satisfy the condition, please try again: ");
+            integer.next();
+            (num > 5 && num <= 10)
+            System.out.println(Arrays.toString(mas));
         }
 
 //        while (n <= 3) {
