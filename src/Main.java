@@ -5,14 +5,14 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        getArrayEntryNum();
+//        getArrayEntryNum();
 //        getArrayWithoutNum();
-        getArrayMaxMinAvgVal();
-        getArrayArithmeticMean();
-//        getArrayEvenNum();
-        getArrayChangeOddIndexToZero();
-        getArraySortNames();
-        getArrayBubbleSort();
+//        getArrayMaxMinAvgVal();
+//        getArrayArithmeticMean();
+        getArrayEvenNum();
+//        getArrayChangeOddIndexToZero();
+//        getArraySortNames();
+//        getArrayBubbleSort();
     }
     public static Scanner scanner() {
         return new Scanner(System.in);
@@ -47,17 +47,34 @@ public class Main {
         Если такого числа нет - выведите сообщения об этом.
         В результате должен быть новый массив без указанного числа.
         */
-//        public static void getArrayWithoutNum() {
-//            int[] notnum = new int[]{1, 2, 3, 4, 5};
-//
-//            Scanner integer = new Scanner(System.in);
-//            System.out.print("Please, enter any integer: ");
-//            int num = integer.nextInt();
-//
-//            int k = Arrays.binarySearch(notnum, num);
-//
-//
-//        }
+    public static void getArrayWithoutNum() {
+        System.out.print("Please, enter any integer: ");
+        int n1 = scanner().nextInt();
+        int c = 0;
+        int[] mas11 = new int[] {0, 2, 3, 4, 5, -5, 4, -3, 2, 1};
+
+        int[] mas12 = new int[mas11.length];
+        for (int i = 0; i < mas11.length; i++)
+        {
+            if (mas11[i] == n1)
+            {
+                c++;
+            }else
+                mas11[i-c] = mas11[i];
+        }
+        if (c == 0)
+        {
+            System.out.println("The entered number " + n1 + " is not in the array");
+            System.out.println();
+            return;
+        }
+        for (int i = 0; i < mas12.length; i++)
+            mas12[i] = mas11[i];
+        for (int i = 0; i < mas12.length-c; i++)
+            System.out.print(mas12[i]+" ");
+        System.out.println();
+        System.out.println();
+    }
         /*
         2. Создайте и заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
         Для генерации случайного числа используйте метод Math.random().
@@ -138,25 +155,33 @@ public class Main {
         Если пользователь ввёл не подходящее число, то программа должна просить пользователя повторить ввод.
         Создайте второй массив только из чётных элементов первого массива, если они там есть, и вывести его на экран.
         */
-//    public static void getArrayEvenNum() {
-//        Scanner integer = new Scanner(System.in);
-//        System.out.print("Please, enter an array length between 6 and 10 inclusive: ");
-////        int num = integer.nextInt();
-//
-//        int n = 0;
-//
-//        while (n < 3) {
-//            if(integer.hasNextInt()){
-//                n = integer.nextInt();
-//                if(n < 3){
-//                    System.out.print("Введенное число должно быть больше 3. Повторите ввод: ");
-//                }
-//            } else {
-//                System.out.println("Вы ввели не число. Повторите ввод:");
-//                integer.next();
-//            }
-//        }
-// }
+    public static void getArrayEvenNum() {
+        System.out.print("Please, enter an array length between 6 and 10 inclusive: ");
+        int n4 = scanner().nextInt();
+        int c = 0;
+        while (n4 <= 5 || n4 > 10) {
+            System.out.println("Attention: array length can be greater than 5 and less than or equal to 10,");
+            System.out.print("please, enter an array length between 6 and 10 inclusive: ");
+            n4 = scanner().nextInt();
+        }
+        int[] mas41 = new int[n4];
+        int[] mas42 = new int[mas41.length];
+        for (int i = 0; i < mas41.length; i++)
+            mas41[i] = (int) (Math.random()*100);
+        for (int i = 0; i < mas41.length; i++)
+            System.out.print(mas41[i]+" ");
+        System.out.println();
+        for (int i = 0; i < mas41.length; i++)
+            if(mas41[i]%2==1)
+                c++;
+            else
+                mas41[i-c]=mas41[i];
+        for (int i = 0; i < mas42.length; i++)
+            mas42[i] = mas41[i];
+        for (int i = 0; i < mas42.length-c; i++)
+            System.out.print(mas42[i]+" ");
+        System.out.println();
+    }
         /*
         5. Создайте массив и заполните массив.
         Выведите массив на экран в строку.
