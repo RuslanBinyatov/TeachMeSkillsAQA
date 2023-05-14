@@ -130,19 +130,34 @@ public class Main {
         System.out.print("Please, enter an array length between 6 and 10 inclusive: ");
         int num = integer.nextInt();
 
-        int[] mas = new int[num];
 
-        for (int i = 0; i < mas.length; i++) {
-            mas[i] = (int) (Math.random() * 10);
-        }
-
-        if (num > 5) {
+        while (num >= 5) {
+            Scanner sc = new Scanner(System.in);
             System.out.print("The entered value does not satisfy the condition, please try again: ");
-            integer.next();
-            if (num <= 5);
-            break;
+            int sc = integer.nextInt();
         }
-        System.out.println(Arrays.toString(mas));
+
+
+
+//        do {
+//            System.out.print("The entered value does not satisfy the condition, please try again: ");
+//            integer.next();
+//        } while (num >= 5); {
+//        }
+
+//        int[] mas = new int[num];
+//
+//        for (int i = 0; i < mas.length; i++) {
+//            mas[i] = (int) (Math.random() * 10);
+//        }
+//
+//        for (int num = 0; num > 5; num++) {
+//            System.out.print("The entered value does not satisfy the condition, please try again: ");
+//            integer.next();
+//            if (num <= 5);
+//            break;
+//        }
+//        System.out.println(Arrays.toString(mas));
 
 
 //        int[] mas = new int[num];
