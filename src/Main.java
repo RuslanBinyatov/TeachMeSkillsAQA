@@ -4,20 +4,18 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-
-//        getArrayEntryNum();
-//        getArrayWithoutNum();
-//        getArrayMaxMinAvgVal();
-//        getArrayArithmeticMean();
+        getArrayEntryNum();
+        getArrayWithoutNum();
+        getArrayMaxMinAvgVal();
+        getArrayArithmeticMean();
         getArrayEvenNum();
-//        getArrayChangeOddIndexToZero();
-//        getArraySortNames();
-//        getArrayBubbleSort();
+        getArrayChangeOddIndexToZero();
+        getArraySortNames();
+        getArrayBubbleSort();
     }
     public static Scanner scanner() {
         return new Scanner(System.in);
     }
-
     // Одномерные массивы
         /*
         0. Создайте массив целых чисел.
@@ -42,16 +40,18 @@ public class Main {
         System.out.println();
     }
         /*
-        1. Создайте массив целых чисел. Удалите все вхождения заданного числа из массива.
+        1. Создайте массив целых чисел.
+        Удалите все вхождения заданного числа из массива.
         Пусть число задается с консоли (класс Scanner).
         Если такого числа нет - выведите сообщения об этом.
         В результате должен быть новый массив без указанного числа.
         */
     public static void getArrayWithoutNum() {
+        int[] mas11 = new int[] {0, 2, 3, 4, 5, -5, 4, -3, 2, 1};
+        System.out.println(Arrays.toString(mas11));
         System.out.print("Please, enter any integer: ");
         int n1 = scanner().nextInt();
         int c = 0;
-        int[] mas11 = new int[] {0, 2, 3, 4, 5, -5, 4, -3, 2, 1};
 
         int[] mas12 = new int[mas11.length];
         for (int i = 0; i < mas11.length; i++)
@@ -82,7 +82,6 @@ public class Main {
         Пусть размер массива вводится с консоли.
          */
     public static void getArrayMaxMinAvgVal() {
-//        Scanner integer = new Scanner(System.in);
         System.out.print("Please, enter the length of the array: ");
         int n2 = scanner().nextInt();
 
@@ -181,6 +180,7 @@ public class Main {
         for (int i = 0; i < mas42.length-c; i++)
             System.out.print(mas42[i]+" ");
         System.out.println();
+        System.out.println();
     }
         /*
         5. Создайте массив и заполните массив.
@@ -202,7 +202,8 @@ public class Main {
         System.out.println();
     }
         /*
-        6. Создайте массив строк. Заполните его произвольными именами людей.
+        6. Создайте массив строк.
+        Заполните его произвольными именами людей.
         Отсортируйте массив. Результат выведите на консоль.
         */
     public static void getArraySortNames() {
