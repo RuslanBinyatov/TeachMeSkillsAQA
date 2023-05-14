@@ -135,18 +135,63 @@ public class Main {
         for (int i = 0; i < mas.length; i++) {
             mas[i] = (int) (Math.random() * 10);
         }
-        while (num <= 5 && num > 10) {
-            System.out.println("The entered value does not satisfy the condition, please try again: ");
+
+        if (num > 5) {
+            System.out.print("The entered value does not satisfy the condition, please try again: ");
             integer.next();
-//            System.out.println(Arrays.toString(mas));
+            if (num <= 5);
+            break;
         }
         System.out.println(Arrays.toString(mas));
-        else if {
-            System.out.println("The entered value does not satisfy the condition, please try again: ");
-            integer.next();
-            (num > 5 && num <= 10)
-            System.out.println(Arrays.toString(mas));
-        }
+
+
+//        int[] mas = new int[num];
+//
+//        do {
+//            System.out.println("The entered value does not satisfy the condition, please try again: ");
+//            integer.next();
+//        } while (num > 5 && num <= 10);
+//        break;
+//
+//        for (int i = 0; i < mas.length; i++) {
+//            mas[i] = (int) (Math.random() * 10);
+//
+//            System.out.println(Arrays.toString(mas));
+//        }
+
+//        for (int i = 0; i < mas.length; i++) {
+//            mas[i] = (int) (Math.random() * 10);
+//        while (num <= 5 && num > 10) {
+//            System.out.println("The entered value does not satisfy the condition, please try again: ");
+//            integer.next();
+////            System.out.println(Arrays.toString(mas));
+//            if (num <= 5 && num > 10)
+//                break;
+//        }
+//        }
+//        System.out.println(Arrays.toString(mas));
+
+//        do {
+//            System.out.println(number + " в степени " + power + " = " + result);
+//            power++;
+//            result = result * number;
+//        }while (result < 10000);
+
+//        while(true) {
+//            result = result * number;
+//            System.out.println(number + " в степени " + power + " = " + result);
+//            power++;
+//            if (power>10)
+//                break; // выход из цикла
+//        }
+
+
+//        else if {
+//            System.out.println("The entered value does not satisfy the condition, please try again: ");
+//            integer.next();
+//            (num > 5 && num <= 10)
+//            System.out.println(Arrays.toString(mas));
+//        }
 
 //        while (i <= 98) {
 //            System.out.print(i+" ");
