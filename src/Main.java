@@ -1,4 +1,4 @@
-// Написать программу для вывода «Hello World» на консоль
+// Homework_6
 public class Main
 {
     public static void main(String[] args)
