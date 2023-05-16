@@ -29,8 +29,8 @@ public class Main
         int b = 0;
         int c = 0;
         for (int dm1 = 0; dm1 < threeDimArray.length; dm1++) {
-            a = dm1 + 1;
-             = a;
+            a = d + 1;
+            d = a;
             for (int dm2 = 0; dm2 < threeDimArray[dm1].length; dm2++) {
                 b = dm2 + 1;
                 dm2 = b;
