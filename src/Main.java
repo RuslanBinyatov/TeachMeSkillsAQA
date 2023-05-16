@@ -80,6 +80,7 @@ public class Main
             System.out.println();
         }
         System.out.println();
+
         for (int i = 0; i < mas3.length; i++) {
             for (int j = 0; j < mas3[i].length; j++) {
                 sum = sum + mas3[i][j];
