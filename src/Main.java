@@ -6,6 +6,8 @@ public class Main
     public static void main(String[] args) {
         getThreeDimArrayEachElementNum();
         getChessBoard();
+
+        getTwoDimArraySumElem();
     }
     public static Scanner scanner() {
         return new Scanner(System.in);
@@ -25,24 +27,16 @@ public class Main
                         {7, 8, 9}
                 }
         };
-        int a = 0;
-        int b = 0;
-        int c = 0;
         for (int dm1 = 0; dm1 < threeDimArray.length; dm1++) {
-            a = d + 1;
-            d = a;
             for (int dm2 = 0; dm2 < threeDimArray[dm1].length; dm2++) {
-                b = dm2 + 1;
-                dm2 = b;
                 for (int dm3 = 0; dm3 < threeDimArray[dm1][dm2].length; dm3++) {
-                    c = dm3 + 1;
-                    dm3 = c;
                     System.out.print(threeDimArray[dm1][dm2][dm3] + "  ");
                 }
                 System.out.println();
             }
         }
         System.out.println();
+        int a = 0;
     }
         /*
         1. Шахматная доска.
@@ -70,5 +64,27 @@ public class Main
             System.out.println();
         }
         System.out.println();
+    }
+        /*
+        3. Создайте двумерный массив целых чисел.
+        Выведите на консоль сумму всех элементов массива.
+        */
+    public static void getTwoDimArraySumElem() {
+        int mas3[][] = new int[3][3];
+        int sum = 0;
+        for (int i = 0; i < mas3.length; i++) {
+            for (int j = 0; j < mas3[i].length; j++) {
+                mas3[i][j] = (int) ((Math.random() * 10)+1);
+                System.out.print(mas3[i][j] + "  ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+        for (int i = 0; i < mas3.length; i++) {
+            for (int j = 0; j < mas3[i].length; j++) {
+                sum = sum + mas3[i][j];
+            }
+        }
+        System.out.println("Sum of all array elements = " + sum);
     }
 }
