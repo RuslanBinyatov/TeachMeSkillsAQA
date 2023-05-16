@@ -3,15 +3,13 @@ import java.util.Scanner;
 // Homework_6
 public class Main
 {
-    public static void main(String[] args)
-    {
-        System.out.println("Hello World");
+    public static void main(String[] args) {
+        getThreeArrayEachElementNum();
     }
-        getThreeArrayEachElementNum()
-}
     public static Scanner scanner() {
         return new Scanner(System.in);
     }
+
     // Двумерные и n-массивы
         /*
         0. Создать трехмерный массив из целых чисел.
@@ -19,7 +17,6 @@ public class Main
         Пусть число, на которое будет увеличиваться каждый элемент, задается из консоли.
         */
     public static void getThreeArrayEachElementNum() {
-        // three-dimensional+ array
         int[][][] threeArray = new int[][][] {
                 {
                         {
