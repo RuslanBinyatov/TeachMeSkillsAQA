@@ -25,12 +25,18 @@ public class Main
                         {7, 8, 9}
                 }
         };
-        b = 0;
+        int a = 0;
+        int b = 0;
+        int c = 0;
         for (int dm1 = 0; dm1 < threeDimArray.length; dm1++) {
-            b = dm1 + 1;
-            dm1 = b;
+            a = dm1 + 1;
+             = a;
             for (int dm2 = 0; dm2 < threeDimArray[dm1].length; dm2++) {
+                b = dm2 + 1;
+                dm2 = b;
                 for (int dm3 = 0; dm3 < threeDimArray[dm1][dm2].length; dm3++) {
+                    c = dm3 + 1;
+                    dm3 = c;
                     System.out.print(threeDimArray[dm1][dm2][dm3] + "  ");
                 }
                 System.out.println();
