@@ -7,7 +7,7 @@ public class Main
     {
         System.out.println("Hello World");
     }
-
+        getThreeArrayEachElementNum()
 }
     public static Scanner scanner() {
         return new Scanner(System.in);
@@ -18,9 +18,9 @@ public class Main
         С помощью циклов "пройти" по всему массиву и увеличить каждый элемент на заданное число.
         Пусть число, на которое будет увеличиваться каждый элемент, задается из консоли.
         */
-    public static void nDimensionalArray() {
+    public static void getThreeArrayEachElementNum() {
         // three-dimensional+ array
-        int[][][] get3DArrayEachElementNum = new int[][][]{
+        int[][][] threeArray = new int[][][] {
                 {
                         {
                                 {1, 2, 3},
@@ -29,10 +29,10 @@ public class Main
                 }
         };
 
-        for (int dm1 = 0; dm1 < get3DArrayEachElementNum.length; dm1++) {
-            for (int dm2 = 0; dm2 < get3DArrayEachElementNum[dm1].length; dm2++) {
-                for (int dm3 = 0; dm3 < get3DArrayEachElementNum[dm1][dm2].length; dm3++) {
-                    System.out.println(get3DArrayEachElementNum[dm1][dm2][dm3] + " ");
+        for (int dm1 = 0; dm1 < threeArray.length; dm1++) {
+            for (int dm2 = 0; dm2 < threeArray[dm1].length; dm2++) {
+                for (int dm3 = 0; dm3 < threeArray[dm1][dm2].length; dm3++) {
+                    System.out.println(threeArray[dm1][dm2][dm3] + " ");
                 }
             }
         }
