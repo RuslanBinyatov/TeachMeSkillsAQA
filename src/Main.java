@@ -36,7 +36,19 @@ public class Main
             }
         }
         System.out.println();
-        int a = 0;
+        int x = 1;
+        for (int dm1 = 0; dm1 < threeDimArray.length; dm1++) {
+            threeDimArray[dm1] = 1;
+            for (int dm2 = 0; dm2 < threeDimArray[dm1].length; dm2++) {
+
+                for (int dm3 = 0; dm3 < threeDimArray[dm1][dm2].length; dm3++) {
+
+                    System.out.print(threeDimArray[dm1][dm2][dm3] + "  ");
+                }
+                System.out.println();
+            }
+        }
+        System.out.println();
     }
         /*
         1. Шахматная доска.
