@@ -14,6 +14,7 @@ public class Main {
         getSequence();
         getTenFirstNum();
         getSquareNum();
+        getSquareNumDiff();
 
         getElevenFirstFibonacci();
         getDeposit();
@@ -161,7 +162,7 @@ public class Main {
             System.out.print("Please, enter any positive number: ");
             int num = posnum.nextInt();
                 int sum = 0;
-                for (int i = 1; i <= num; i++) {
+                for (int i = 1; i < num; i++) {
                 sum = sum + i;
                 }
                 if (num > 0) {
@@ -202,6 +203,12 @@ public class Main {
                 System.out.print(i * i+" ");
             }
             System.out.println();
+        }
+        // 6. Иной способ
+        public static void getSquareNumDiff() {
+            for (int i = 10; i <= 20; i++) {
+                System.out.println((int) Math.pow(i, 2));
+            }
         }
 
     // Дополнительное задание
