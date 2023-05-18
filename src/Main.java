@@ -207,8 +207,9 @@ public class Main {
         // 6. Иной способ
         public static void getSquareNumDiff() {
             for (int i = 10; i <= 20; i++) {
-                System.out.println((int) Math.pow(i, 2));
+                System.out.print((int) Math.pow(i, 2) + " ");
             }
+            System.out.println();
         }
 
     // Дополнительное задание
