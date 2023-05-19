@@ -4,10 +4,9 @@ import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args) {
+
         getThreeDimArrayEachElementNum();
         getChessBoard();
-
-        getTwoDimArraySumElem();
     }
     public static Scanner scanner() {
         return new Scanner(System.in);
@@ -74,29 +73,5 @@ public class Main
             }
             System.out.println();
         }
-        System.out.println();
-    }
-        /*
-        3. Создайте двумерный массив целых чисел.
-        Выведите на консоль сумму всех элементов массива.
-        */
-    public static void getTwoDimArraySumElem() {
-        int mas3[][] = new int[3][3];
-        int sum = 0;
-        for (int i = 0; i < mas3.length; i++) {
-            for (int j = 0; j < mas3[i].length; j++) {
-                mas3[i][j] = (int) ((Math.random() * 10)+1);
-                System.out.print(mas3[i][j] + "  ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-
-        for (int i = 0; i < mas3.length; i++) {
-            for (int j = 0; j < mas3[i].length; j++) {
-                sum = sum + mas3[i][j];
-            }
-        }
-        System.out.println("Sum of all array elements = " + sum);
     }
 }
