@@ -35,8 +35,10 @@ public class Main
                 System.out.println();
             }
         }
-        System.out.println();
-        int n = 1;
+        Scanner intnum = new Scanner(System.in);
+        System.out.print("Please, enter any integer number: ");
+        int n = intnum.nextInt();
+
         for (int dm1 = 0; dm1 < threeDimArray.length; dm1++) {
             for (int dm2 = 0; dm2 < threeDimArray[dm1].length; dm2++) {
                 for (int dm3 = 0; dm3 < threeDimArray[dm1][dm2].length; dm3++) {
