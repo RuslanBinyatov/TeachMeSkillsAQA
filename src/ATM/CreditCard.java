@@ -29,7 +29,7 @@ public class CreditCard {
     public double getRemove() {
         return remove;
     }
-    public void setRemove(double put) {
+    public void setRemove(double remove) {
         this.remove = remove;
     }
     public void putMoney() {
@@ -42,7 +42,3 @@ public class CreditCard {
         System.out.println("Account balance after withdrawal: " + newBalance);
     }
 }
-    public void withdrawMoney() {
-        double newBalance = balance - getWriteOff();
-        System.out.println("Account balance after withdrawal: " + newBalance);
-    }
