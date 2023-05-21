@@ -4,6 +4,8 @@ public class CreditCard {
     private String cardNumber;
     private double balance;
     int sum;
+    private double put;
+    private double remove;
 
 //    public static Scanner scanner() {
 //
@@ -26,66 +28,32 @@ public class CreditCard {
         System.out.println("Credit card number is: " + this.cardNumber);
         System.out.println("Credit card balance is: " + this.balance);
     }
-    //    public void getBalance() {
-//        return;
-//    }
     public void getAddAmount() {
         System.out.println("Credit card balance is: " + this.balance);
     }
+    public double getPut() {
+        return put;
+    }
+    public void setPut(double put) {
+        this.put = put;
+    }
+    public double getRemove() {
+        return remove;
+    }
+    public void setRemove(double put) {
+        this.remove = remove;
+    }
+    public void putMoney() {
+        double newBalance = balance + getPut();
+        System.out.println("Account balance after crediting money: " + newBalance);
+    }
 
-
-    //    void getCardInfo()
-//    {
-//        System.out.println("Card account number: "+ accountNumber);
-//        System.out.println("Current amount on the card: " + currentAmount);
-//    }
-//    void cashWithdrawal()
-//    {
-//        System.out.println("Withdrawal from a credit card: "+ summa);
-//        System.out.println("Current card balance: " + (currentAmount-summa));
-//    }
+    public void removeMoney() {
+        double newBalance = balance - getRemove();
+        System.out.println("Account balance after withdrawal: " + newBalance);
+    }
     public void getPutSum() {
         System.out.println("Amount credited to the card: "+ sum);
         System.out.println("Credit card balance is: " + (balance + sum));
     }
-}
-
-public class CreditCard {
-    private String accountNumber;
-    private double balance;
-    private double accrua;
-    private double writeOff;
-
-    public double getAccrual() {
-        return accrual;
-    }
-
-    public double getWriteOff() {
-        return writeOff;
-    }
-
-    public void setAccrual(double accrual) {
-        this.accrual = accrual;
-    }
-
-    public void setWriteOff(double writeOff) {
-        this.writeOff = writeOff;
-    }
-
-    public void getCardInfo() {
-        System.out.println("Credit card information:");
-        System.out.println("Credit card number: " + accountNumber);
-        System.out.println("Balance: " + balance);
-    }
-
-    public void addMoney() {
-        double newBalance = balance + getAccrual();
-        System.out.println("Account balance after accrual: " + newBalance);
-    }
-
-    public void withdrawMoney() {
-        double newBalance = balance - getWriteOff();
-        System.out.println("Account balance after withdrawal: " + newBalance);
-    }
-
 }
