@@ -3,23 +3,12 @@ package ATM;
 public class CreditCard {
     private String cardNumber;
     private double balance;
-    int sum;
     private double put;
     private double remove;
-
-//    public static Scanner scanner() {
-//
-//        return new Scanner(System.in);
-//    }
-//    System.out.print("Please, enter the amount you want to put on the card: ");
-//    int sum = scanner.nextInt();
 
     public CreditCard() {
         this.cardNumber = "Unknown number";
     }
-    //    public Scanner scanner() {
-//        return new Scanner(System.in);
-//    }
     public CreditCard(String cardNumber, double balance) {
         this.cardNumber = cardNumber;
         this.balance = balance;
@@ -52,8 +41,8 @@ public class CreditCard {
         double newBalance = balance - getRemove();
         System.out.println("Account balance after withdrawal: " + newBalance);
     }
-    public void getPutSum() {
-        System.out.println("Amount credited to the card: "+ sum);
-        System.out.println("Credit card balance is: " + (balance + sum));
-    }
 }
+    public void withdrawMoney() {
+        double newBalance = balance - getWriteOff();
+        System.out.println("Account balance after withdrawal: " + newBalance);
+    }
