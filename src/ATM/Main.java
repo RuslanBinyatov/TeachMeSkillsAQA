@@ -18,13 +18,6 @@ public class Main {
         CreditCard c3 = new CreditCard("3333-3333-3333-3333", 3000);
 
         a1.getCreditCardinfo();
-        System.out.println();
-        b2.getCreditCardinfo();
-        System.out.println();
-        c3.getCreditCardinfo();
-        System.out.println();
-
-        a1.getCreditCardinfo();
         a1.setPut(100);
         a1.putMoney();
         System.out.println();
@@ -35,8 +28,7 @@ public class Main {
         System.out.println();
 
         c3.getCreditCardinfo();
-        c3.getRemove(300);
+        c3.setRemove(300);
         c3.removeMoney();
     }
-
 }

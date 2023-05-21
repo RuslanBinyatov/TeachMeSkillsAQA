@@ -36,7 +36,6 @@ public class CreditCard {
         double newBalance = balance + getPut();
         System.out.println("Account balance after crediting money: " + newBalance);
     }
-
     public void removeMoney() {
         double newBalance = balance - getRemove();
         System.out.println("Account balance after withdrawal: " + newBalance);
