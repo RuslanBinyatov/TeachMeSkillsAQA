@@ -1,51 +1,27 @@
 package CreditCard;
+/*
+    Основное задание
+    1. Создать класс CreditCard c полями: номер счета, текущая сумма на счету.
+    Добавьте метод, который позволяет начислять сумму на кредитную карточку.
+    Добавьте метод, который позволяет снимать с карточки некоторую сумму.
+    Добавьте метод, который выводит текущую информацию о карточке.
+    Напишите программу, которая создает три объекта класса CreditCard у которых заданы номер счета и начальная сумма
+    Тестовый сценарий для проверки:
+    Положите деньги на первые две карточки и снимите с третьей.
+    Выведите на экран текущее состояние всех трех карточек.
+    */
 
 public class Main {
-    private String cardNumber;
-    private double balance;
-    int sum;
+    public static void main (String[] args) {
+        CreditCard a1 = new CreditCard("1111-1111-1111-1111", 1000);
+        CreditCard b2 = new CreditCard("2222-2222-2222-2222", 2000);
+        CreditCard c3 = new CreditCard("3333-3333-3333-3333", 3000);
 
-//    public static Scanner scanner() {
-//
-//        return new Scanner(System.in);
-//    }
-//    System.out.print("Please, enter the amount you want to put on the card: ");
-//    int sum = scanner.nextInt();
-
-    public CreditCard() {
-        this.cardNumber = "Unknown number";
-    }
-    //    public Scanner scanner() {
-//        return new Scanner(System.in);
-//    }
-    public CreditCard(String cardNumber, double balance) {
-        this.cardNumber = cardNumber;
-        this.balance = balance;
-    }
-    public void getCreditCardinfo() {
-        System.out.println("Credit card number is: " + this.cardNumber);
-        System.out.println("Credit card balance is: " + this.balance);
-    }
-    //    public void getBalance() {
-//        return;
-//    }
-    public void getAddAmount() {
-        System.out.println("Credit card balance is: " + this.balance);
-    }
-
-
-    //    void getCardInfo()
-//    {
-//        System.out.println("Card account number: "+ accountNumber);
-//        System.out.println("Current amount on the card: " + currentAmount);
-//    }
-//    void cashWithdrawal()
-//    {
-//        System.out.println("Withdrawal from a credit card: "+ summa);
-//        System.out.println("Current card balance: " + (currentAmount-summa));
-//    }
-    public void getPutSum() {
-        System.out.println("Amount credited to the card: "+ sum);
-        System.out.println("Credit card balance is: " + (balance + sum));
+        a1.getCreditCardinfo();
+        System.out.println();
+        b2.getCreditCardinfo();
+        System.out.println();
+        c3.getCreditCardinfo();
+        System.out.println();
     }
 }
