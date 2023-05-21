@@ -23,28 +23,25 @@ public class Main {
         System.out.println();
         c3.getCreditCardinfo();
         System.out.println();
-    }
-}
 
-public class AccountMovement {
-    public static void main(String[] args) {
 
         CreditCard card1 = new CreditCard("1456 7388 9052 1659", 2370.5);
         CreditCard card2 = new CreditCard("6194 3807 1516 0284", 4236.9);
         CreditCard card3 = new CreditCard("5890 0000 2391 1365", 1347.45);
 
-        card1.getCardInfo();
-        card1.setPut(1988.2);
-        card1.addMoney();
+        a1.getCreditCardinfo();
+        a1.setPut(1988.2);
+        a1.putMoney();
         System.out.println();
 
-        card2.getCardInfo();
-        card2.setAccrual(3400);
-        card2.addMoney();
+        b2.getCreditCardinfo();
+        b2.setPut(3400);
+        b2.putMoney();
         System.out.println();
 
-        card3.getCardInfo();
-        card3.setWriteOff(276.8);
-        card3.withdrawMoney();
+        c3.getCreditCardinfo();
+        c3.removeMoney(276.8);
+        c3.removeMoney();
     }
+
 }
