@@ -47,32 +47,34 @@ public class Main {
         В результате должен быть новый массив без указанного числа.
         */
     public static void getArrayWithoutNum() {
-        int[] mas11 = new int[] {0, 2, 3, 4, 5, -5, 4, -3, 2, 1};
+        int[] mas11 = new int[] {5, 2, 3, 4, 5, -5, 4, -3, 2, 5};
         System.out.println(Arrays.toString(mas11));
+        for (int i = 0; i < mas11.length; i++) {
+        }
         System.out.print("Please, enter any integer: ");
         int n1 = scanner().nextInt();
         int c = 0;
-
-        int[] mas12 = new int[mas11.length];
-        for (int i = 0; i < mas11.length; i++)
-        {
-            if (mas11[i] == n1)
-            {
+        for (int i = 0; i < mas11.length; i++) {
+            if (mas11[i] == n1){
                 c++;
-            }else
-                mas11[i-c] = mas11[i];
+            }
         }
-        if (c == 0)
-        {
+        if (c == 0) {
             System.out.println("The entered number " + n1 + " is not in the array");
             System.out.println();
             return;
         }
-        for (int i = 0; i < mas12.length; i++)
-            mas12[i] = mas11[i];
-        for (int i = 0; i < mas12.length-c; i++)
-            System.out.print(mas12[i]+" ");
-        System.out.println();
+        int [] mas12 = new int [mas11.length-c];
+        int j = 0;
+        for (int i = 0; i < mas11.length; i++) {
+            if (mas11[i] != n1) {
+                mas12[j] = mas11[i];
+                j++;
+            }
+        }
+        System.out.println(Arrays.toString(mas12));
+        for (int i = 0; i < mas12.length; i++) {
+        }
         System.out.println();
     }
         /*
