@@ -1,5 +1,4 @@
 package ATM;
-
 public class CreditCard {
     private String cardNumber;
     private double balance;
