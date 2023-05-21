@@ -1,4 +1,4 @@
-package CreditCard;
+package ATM;
 /*
     Основное задание
     1. Создать класс CreditCard c полями: номер счета, текущая сумма на счету.
