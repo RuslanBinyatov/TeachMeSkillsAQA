@@ -23,19 +23,22 @@ public class Main {
         Пусть число для поиска задается с консоли (класс Scanner).
         */
     public static void getArrayEntryNum() {
-        int[] mas0 = new int[]{1, 2, 3, 4, 5};
+        int[] mas0 = new int[] {1, 2, 3, 4, 5, 10, 5, 1, 10};
         System.out.println(Arrays.toString(mas0));
-
+        for (int i = 0; i < mas0.length; i++) {
+        }
         System.out.print("Please, enter any integer: ");
         int n0 = scanner().nextInt();
-
-        for (int index = 0; index < mas0.length; index++) {
-            if (mas0[index] == n0) {
-                System.out.println("Entered integer " + n0 + " present in the array");
-                break;
+        int c = 0;
+        for (int i = 0; i < mas0.length; i++) {
+            if (mas0[i] == n0) {
+                c++;
             }
-            if (index == mas0.length - 1)
-                System.out.println("The entered number " + n0 + " is not in the array");
+        }
+        if (c == 0) {
+            System.out.println("The entered number " + n0 + " is not in the array");
+        } else {
+            System.out.println("Entered integer " + n0 + " present in the array " + c + " times");
         }
         System.out.println();
     }
