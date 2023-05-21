@@ -24,23 +24,18 @@ public class Main {
         c3.getCreditCardinfo();
         System.out.println();
 
-
-        CreditCard card1 = new CreditCard("1456 7388 9052 1659", 2370.5);
-        CreditCard card2 = new CreditCard("6194 3807 1516 0284", 4236.9);
-        CreditCard card3 = new CreditCard("5890 0000 2391 1365", 1347.45);
-
         a1.getCreditCardinfo();
-        a1.setPut(1988.2);
+        a1.setPut(100);
         a1.putMoney();
         System.out.println();
 
         b2.getCreditCardinfo();
-        b2.setPut(3400);
+        b2.setPut(200);
         b2.putMoney();
         System.out.println();
 
         c3.getCreditCardinfo();
-        c3.removeMoney(276.8);
+        c3.getRemove(300);
         c3.removeMoney();
     }
 
