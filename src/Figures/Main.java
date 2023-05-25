@@ -21,6 +21,5 @@ public class Main {
         for(Figure fig : figure)
             System.out.println(fig.getName() + ": perimeter = " + fig.getPerimeter());
         System.out.println();
-
     }
 }
