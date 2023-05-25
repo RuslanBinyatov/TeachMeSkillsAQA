@@ -16,8 +16,13 @@ public class Triangle extends Figure {
     @Override
     public double getArea() {
         double p = (sideA + sideB + sideC) / 2; // полупериметр триугольника
-        double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC)); // формуга Герона
+        double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC)); // формула Герона
         return area;
+    }
+    @Override
+    public double getPerimeter() {
+        double perimeter = sideA + sideB + sideC;
+        return perimeter;
     }
 
     @Override

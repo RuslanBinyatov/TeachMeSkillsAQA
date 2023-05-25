@@ -15,6 +15,11 @@ public class Rectangle extends Figure {
     public double getArea() {
         return width * height;
     }
+    @Override
+    public double getPerimeter() {
+        double perimeter = (width + height) * 2;
+        return perimeter;
+    }
 
     @Override
     public String getName() {

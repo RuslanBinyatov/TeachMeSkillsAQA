@@ -10,11 +10,16 @@ public class Circle extends Figure {
     }
 
     @Override
+
     public double getArea(){
         double area = Math.PI * radius * radius;
         return area;
     }
-
+    @Override
+    public double getPerimeter(){
+        double perimeter = Math.PI * radius * 2;
+        return perimeter;
+    }
     @Override
     public String getName() {
         return NAME;
