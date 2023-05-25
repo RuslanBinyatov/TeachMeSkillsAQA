@@ -17,8 +17,10 @@ public class Main {
 
         for(Figure fig : figure)
             System.out.println(fig.getName() + ": area = " + fig.getArea());
-
+        System.out.println();
         for(Figure fig : figure)
-            System.out.println(fig.getName() + ": area = " + fig.getPerimeter());
+            System.out.println(fig.getName() + ": perimeter = " + fig.getPerimeter());
+        System.out.println();
+
     }
 }
