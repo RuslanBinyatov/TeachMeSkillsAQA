@@ -22,4 +22,3 @@ public class Main {
         employee3.getPositionName();
     }
 }
-
