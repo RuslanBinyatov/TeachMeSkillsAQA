@@ -41,29 +41,3 @@ public class Main {
         System.out.println("Sum of perimeters of all figures = " + sum);
     }
 }
-
-
-
-//public class Main {
-//    public static void main(String[] args) {
-//        Figure[] figure = {
-//                new Triangle(3, 4, 5),
-//                new Rectangle(1, 2),
-//                new Circle(6)},
-//                new Rectangle2(7, 8),
-//        new
-//
-//        for(Figure fig : figure)
-//            System.out.println(fig.getName() + ": area = " + fig.getArea());
-//        System.out.println();
-//        for(Figure fig : figure)
-//            System.out.println(fig.getName() + ": perimeter = " + fig.getPerimeter());
-//        System.out.println();
-//
-//        double sum = 0;
-//        for (int i = 0; i < figure.length; i++) {
-//            sum += figure[i].getPerimeter();
-//        }
-//        System.out.println("Sum of perimeters of all figures = " + sum);
-//    }
-//}

@@ -1,16 +1,16 @@
 package Figures;
 
 public class Triangle extends Figure {
-    public Triangle(String figureType, int a, int b, int c) {
+    public Triangle(String figureType, double a, double b, double c) {
         super(figureType);
         this.a = a;
         this.b = b;
         this.c = c;
     }
 
-    int a;
-    int b;
-    int c;
+    double a;
+    double b;
+    double c;
 
     @Override
     double calculatePerimeter() {
@@ -25,58 +25,3 @@ public class Triangle extends Figure {
         return s;
     }
 }
-
-//public class Triangle extends Figure {
-//    private static final String NAME = "Triangle";
-//
-//    private double sideA;
-//    private double sideB;
-//    private double sideC;
-//
-//    public Triangle(double sideA, double sideB, double sideC) {
-//        this.sideA = sideA;
-//        this.sideB = sideB;
-//        this.sideC = sideC;
-//    }
-//
-//    @Override
-//    public double getArea() {
-//        double p = (sideA + sideB + sideC) / 2;
-//        double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
-//        return area;
-//    }
-//    @Override
-//    public double getPerimeter() {
-//        double perimeter = sideA + sideB + sideC;
-//        return perimeter;
-//    }
-//
-//    @Override
-//    public String getName() {
-//        return NAME;
-//    }
-//
-//    public double getSideA() {
-//        return sideA;
-//    }
-//
-//    public void setSideA(double sideA) {
-//        this.sideA = sideA;
-//    }
-//
-//    public double getSideB() {
-//        return sideB;
-//    }
-//
-//    public void setSideB(double sideB) {
-//        this.sideB = sideB;
-//    }
-//
-//    public double getSideC() {
-//        return sideC;
-//    }
-//
-//    public void setSideC(double sideC) {
-//        this.sideC = sideC;
-//    }
-//}
