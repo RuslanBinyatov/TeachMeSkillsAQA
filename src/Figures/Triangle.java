@@ -1,56 +1,82 @@
 package Figures;
 
 public class Triangle extends Figure {
-    private static final String NAME = "Triangle";
+    public Triangle(String figureType, int a, int b, int c) {
+        super(figureType);
+        this.a = a;
+        this.b = b;
+        this.c = c;
+    }
 
-    private double sideA;
-    private double sideB;
-    private double sideC;
+    int a;
+    int b;
+    int c;
 
-    public Triangle(double sideA, double sideB, double sideC) {
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
+    @Override
+    double calculatePerimeter() {
+        double p = a + b + c;
+        return p;
     }
 
     @Override
-    public double getArea() {
-        double p = (sideA + sideB + sideC) / 2; // полупериметр триугольника
-        double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC)); // формула Герона
-        return area;
-    }
-    @Override
-    public double getPerimeter() {
-        double perimeter = sideA + sideB + sideC;
-        return perimeter;
-    }
-
-    @Override
-    public String getName() {
-        return NAME;
-    }
-
-    public double getSideA() {
-        return sideA;
-    }
-
-    public void setSideA(double sideA) {
-        this.sideA = sideA;
-    }
-
-    public double getSideB() {
-        return sideB;
-    }
-
-    public void setSideB(double sideB) {
-        this.sideB = sideB;
-    }
-
-    public double getSideC() {
-        return sideC;
-    }
-
-    public void setSideC(double sideC) {
-        this.sideC = sideC;
+    double calculateArea() {
+        double p2 = calculatePerimeter() / 2;
+        double s = Math.sqrt(p2 * (p2 - a) * (p2 - b) * (p2 - c));
+        return s;
     }
 }
+
+//public class Triangle extends Figure {
+//    private static final String NAME = "Triangle";
+//
+//    private double sideA;
+//    private double sideB;
+//    private double sideC;
+//
+//    public Triangle(double sideA, double sideB, double sideC) {
+//        this.sideA = sideA;
+//        this.sideB = sideB;
+//        this.sideC = sideC;
+//    }
+//
+//    @Override
+//    public double getArea() {
+//        double p = (sideA + sideB + sideC) / 2;
+//        double area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
+//        return area;
+//    }
+//    @Override
+//    public double getPerimeter() {
+//        double perimeter = sideA + sideB + sideC;
+//        return perimeter;
+//    }
+//
+//    @Override
+//    public String getName() {
+//        return NAME;
+//    }
+//
+//    public double getSideA() {
+//        return sideA;
+//    }
+//
+//    public void setSideA(double sideA) {
+//        this.sideA = sideA;
+//    }
+//
+//    public double getSideB() {
+//        return sideB;
+//    }
+//
+//    public void setSideB(double sideB) {
+//        this.sideB = sideB;
+//    }
+//
+//    public double getSideC() {
+//        return sideC;
+//    }
+//
+//    public void setSideC(double sideC) {
+//        this.sideC = sideC;
+//    }
+//}
