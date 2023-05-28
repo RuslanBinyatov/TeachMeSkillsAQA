@@ -6,7 +6,8 @@ public class Phone {
     private double weight;
 
     public Phone(String number, String model, double weight) {
-        this(number, model);
+        this.number = number;
+        this.model = model;
         this.weight = weight;
     }
     public Phone(String number, String model) {
@@ -15,29 +16,24 @@ public class Phone {
     }
     public Phone() {
     }
-
-    public String getNumber() {
-        return number;
-    }
-
     public void getInfo() {
-        System.out.println("The phone number is " + getNumber() + "\n" +
-                "The model is " + this.model + "\n" +
-                "The phone weight is " + this.weight);
+        System.out.println("Phone number: " + this.number + "\n" +
+                "Phone model: " + this.model + "\n" +
+                "Phone weight (gram): " + this.weight);
     }
-
     public void receiveCall(String name) {
-        System.out.println(name + " is calling.");
+        System.out.println(name + " is calling");
     }
-
+    public void getNumber() {
+        System.out.println(number);
+    }
     public void receiveCall(String name, String number) {
-        System.out.println(name + " is calling." +
-                "The phone number is " + number);
+        System.out.println(name + " is calling " + number);
     }
-
-    public void sendMessage(String... numbers) {
-        for (int i = 0; i < numbers.length; i++) {
-            System.out.println("Send message to number " + numbers[i]);
+    public void sendMessage(String ... nums){
+        System.out.println("Phone numbers to which the message will be sent: ");
+        for (String elements: nums){
+            System.out.println(elements);
         }
     }
 }
